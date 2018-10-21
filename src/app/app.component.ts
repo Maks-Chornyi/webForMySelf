@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Oleh balalayka';
+  users = [
+    {name: 'WFM1', desc: 'desc1'},
+    {name: 'WFM2', desc: 'desc2'},
+    {name: 'WFM3', desc: 'desc3'},
+    {name: 'WFM4', desc: 'desc4'},
+    {name: 'WFM5', desc: 'desc5'},
+    {name: 'WFM6', desc: 'desc6'}
+  ];
 }
