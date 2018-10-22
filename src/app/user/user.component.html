@@ -1,11 +1,11 @@
 <div class="col s3">
   <div class="card">
     <div class="card-image">
-      <img src="https://glavcom.ua/img/article/5030/87_main.jpg">
+      <img src="{{user.picture}}">
       <span class="card-title">{{user.name}}</span>
     </div>
-    <div class="card-content">
-      <p>{{user.desc}}</p>
+    <div class="card-content" [style.height.px]="130">
+      <p>{{user.geo}}</p>
     </div>
     <div class="card-action">
       <a href="#">This is a link</a>

@@ -1,17 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UsersService} from './users.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [UsersService]
 })
-export class AppComponent {
-  users = [
-    {name: 'WFM1', desc: 'desc1'},
-    {name: 'WFM2', desc: 'desc2'},
-    {name: 'WFM3', desc: 'desc3'},
-    {name: 'WFM4', desc: 'desc4'},
-    {name: 'WFM5', desc: 'desc5'},
-    {name: 'WFM6', desc: 'desc6'}
-  ];
+export class AppComponent implements OnInit {
+
+  users = [];
+
+  constructor(private userService: UsersService) {}
+
+  ngOnInit() {
+
+    this.userService.getUsers().subscribe(users => {
+      this.users = users;
+    });
+  }
+
 }
