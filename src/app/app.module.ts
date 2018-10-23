@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import {UserComponent} from './user/user.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HoverDirective} from './hover.directive';
+import {FormsModule} from '@angular/forms';
+import {SearchPipe} from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    HoverDirective
+    HoverDirective,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
