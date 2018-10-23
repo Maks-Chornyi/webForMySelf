@@ -7,18 +7,6 @@ import {UsersService} from './users.service';
   styleUrls: ['./app.component.scss'],
   providers: [UsersService]
 })
-export class AppComponent implements OnInit {
-
-  users = [];
-  searchStr = '';
-
-  constructor(private userService: UsersService) {}
-
-  ngOnInit() {
-
-    this.userService.getUsers().subscribe(users => {
-      this.users = users;
-    });
-  }
+export class AppComponent {
 
 }

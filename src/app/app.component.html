@@ -1,18 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <div class="nav-wrapper">
+    <a href="localhost:8080" class="brand-logo right">Lv350.Java</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/setup">Setup</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
 
-  <div class="row">
-    <div class="input-field col s6">
-      <input value="Alvin" id="first_name" type="text" class="validate" [(ngModel)]="searchStr">
-      <label class="active" for="first_name">Search by name</label>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 
-  <div class="row">
-    <app-user
-      *ngFor="let u of users | search:searchStr"
-      [user]="u">
-    </app-user>
-  </div>
 </div>
 
